@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="ht" >height</label>
+    <input type="text" name="ht" id="ht" value="none">
+    
+    <label for="wt" >weight</label>
+    <input type="text" name="wt" id="wt" value="none">
+    <h1 id="h1"></h1>
+    
+    <button onclick="chk()">check</button>
+</body>
+
+<script type="text/javascript">
+
+    var ht= document.getElementById("ht");
+    console.log(ht.value);
+    var wt= document.getElementById("wt");
+    console.log(wt.value);
+    var h1= document.getElementById("h1");
+
+
+    function chk(){
+      
+       if(ht.value != "" && wt.value != "")
+       {
+           console.log("if running");
+           var bmi = wt.value / (ht.value*ht.value);
+           h1.innerHTML = bmi;
+       }
+       else{
+               h1.innerHTML="Please Enter height and weight";
+       }
+    }
+
+   </script>
+</html>
+<!-- ----------------------------------------------- -->
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>BMI Calculator</h2>
+
+    <label for="weight">Weight (kg):</label>
+    <input type="number" id="weight" placeholder="Enter your weight" >
+
+    <br>
+
+    <label for="height">Height (m):</label>
+    <input type="number" id="height" placeholder="Enter your height" >
+
+    <br>
+
+    <button onclick="calculateBMI()">Calculate BMI</button>
+
+    <h3>Your BMI:</h3>
+    <p id="result"></p>
+
+    <script >
+        function calculateBMI() {
+            var weight = document.getElementById('weight').value;
+            var height = document.getElementById('height').value;
+
+            if (weight && height) {
+                var bmi = weight / (height * height);
+                document.getElementById('result').innerHTML = bmi;
+            } else {
+                document.getElementById('result').innerHTML = 'Please enter both weight and height.';
+            }
+        }
+    </script>
+
+</body>
+</html> -->
